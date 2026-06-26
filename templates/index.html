@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Website Gua</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container"> 
+         <h1>To-do List 📝</h1>
+        
+        <!-- Form tambah tugas -->
+         <form action="/tambah" method="POST">
+            <input type="text" name="nama" placeholder="Tambah tugas baru..." required>
+            <button type="submit">Tambah</button>
+         </form>
+
+        <!-- Daftar tugas -->
+         <ul>
+            {% for t in tugas %}
+            <li>
+                <a href="/detail/{{ t['id'] }}" class="nama-tugas">{{ t['nama'] }}</a>
+                <a href="/hapus/{{ t['id'] }}" class="hapus">❌</a>
+            </li>
+            {% endfor %}
+         </ul>
+    </div>
+</body>
+</html>

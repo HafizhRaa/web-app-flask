@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ tugas ['nama'] }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <a href="/" class="back">← Kembali</a>
+        <h1>{{ tugas['nama'] }}</h1>
+        <div class="deskripsi">
+            <p>{{ tugas['deskripsi'] or 'Belum ada deskripsi...' }}</p>
+        </div>
+        <div class="action">
+            <a href="/edit/{{ tugas['id'] }}" class="btn.edit">✏️ Edit</a>
+            <a href="/hapus/{{ tugas['id'] }}" class="btn.hapus">❌ Hapus</a>
+        </div>
+    </div>
+</body>
+</html>
