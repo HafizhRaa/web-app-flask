@@ -6,6 +6,14 @@ app = Flask(__name__)
 def get_db():
     conn = sqlite3.connect("todo_web.db")
     conn.row_factory = sqlite3.Row
+    conn.execute("""
+        CREATE TABLE IF NOT EXISTS tugas (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            nama TEXT,
+            deskripsi TEXT DEFAULT ''
+        )
+    """)
+    conn.commit()
     return conn
 
 @app.route("/")
