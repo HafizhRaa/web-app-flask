@@ -97,6 +97,29 @@ li {
     margin-bottom: 20px;
 }
 
+.error {
+    color: #e94560;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.link {
+    text-align: center;
+    margin-top: 15px;
+    color: #a8a8b3;
+}
+
+.link a {
+    color: #e94560;
+    text-decoration: none;
+}
+
+.welcome {
+    text-align: right;
+    margin-bottom: 15px;
+    color: #a8a8b3;
+}
+
 .back:hover {
     color: white;
 }
@@ -130,6 +153,12 @@ li {
     color: white;
     text-decoration: none;
     border-radius: 8px;
+}
+
+.btn-logout {
+    color: #e94560;
+    text-decoration: none;
+    margin-left: 10px;
 }
 
 .btn-edit:hover { background-color: #1a4a7a; }

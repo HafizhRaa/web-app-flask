@@ -8,7 +8,9 @@
     <div class="container"> 
          <h1>To-do List 📝</h1>
         
-        <!-- Form tambah tugas -->
+    <div class="welcome">
+        Halo, {{ username }} <a href="/logout" class="btn-logout">logout</a>
+    </div>
          <form action="/tambah" method="POST">
             <input type="text" name="nama" placeholder="Tambah tugas baru..." required>
             <button type="submit">Tambah</button>
