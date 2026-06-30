@@ -1,3 +1,4 @@
+import matplotlib.pyplot as plt
 import pandas as pd
 
 data = {
@@ -25,7 +26,6 @@ print("\n--- rata-rata nilai ---")
 print(df["nilai"].mean())
 
 
-import matplotlib.pyplot as plt
 
 # bikin bar chart
 plt.figure(figsize=(8, 5))
