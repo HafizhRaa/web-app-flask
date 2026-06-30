@@ -6,11 +6,12 @@
 </head>
 <body class="bg-dark text-white min-vh-100 d-flex align-items-center">
         <div class="container" style="max-width: 400px;">
+            <h2 class="text-center mb-4">Register 📄</h2>
             {% if error %}
-            <div class="text-center mf-4">{{ error }}</div>
+            <div class="alert alert-danger">{{ error }}</div>
             {% endif %}
-            <form action="/regigister" method="POST">
-                <div class="md-3">
+            <form action="/register" method="POST">
+                <div class="mb-3">
                     <input type="text" name="username" placeholder="Username"
                             class="form-control bg-secondary text-white border-0" required>
                 </div>
